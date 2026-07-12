@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linda Fashion Boutique</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                Linda Fashion Boutique
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quienes">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Colección</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registro">Registro de Prendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PORTADA / HERO -->
+    <header id="inicio" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="titulo-principal">
+                        Linda Fashion Boutique
+                    </h1>
+
+                    <p class="subtitulo">
+                        Moda femenina moderna, elegante y auténtica para mujeres que desean resaltar su estilo con confianza.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mt-4">
+                        <a href="#productos" class="btn btn-rosa btn-lg">
+                            Ver colección
+                        </a>
+                        <a href="#registro" class="btn btn-light btn-lg fw-bold">
+                            Registrar prenda
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="imagenes/mujeres.jpg" alt="Moda femenina Linda Fashion Boutique" class="img-fluid hero-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- BIENVENIDA -->
+        <section class="text-center p-5">
+            <h2 class="mb-4">Bienvenidas a Linda Fashion Boutique</h2>
+            <p class="mb-4">
+                Somos una boutique femenina ubicada en Shushufindi, dedicada a ofrecer prendas modernas, elegantes y accesibles.
+                Nuestro propósito es brindar una experiencia de compra única con ropa que combine estilo, comodidad y tendencia,
+                permitiendo que cada clienta encuentre la prenda ideal para cualquier ocasión.
+            </p>
+
+            <div class="row text-center mt-4 g-4">
+                <div class="col-md-4">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Moda Actual</h4>
+                            <p>
+                                Prendas inspiradas en tendencias femeninas modernas, juveniles y elegantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Calidad y Estilo</h4>
+                            <p>
+                                Seleccionamos ropa con buen acabado, comodidad y diseños que resaltan la personalidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Atención Personalizada</h4>
+                            <p>
+                                Acompañamos a nuestras clientas para ayudarles a elegir prendas según su gusto y ocasión.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIÉNES SOMOS -->
+        <section id="quienes" class="mt-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h2>Quiénes Somos</h2>
+                    <p>
+                        Linda Fashion Boutique nace con el propósito de resaltar la belleza, la confianza y el estilo de cada mujer
+                        mediante prendas modernas, elegantes y de excelente calidad. Nuestro compromiso es brindar atención personalizada,
+                        ofreciendo una experiencia de compra cercana, confiable y enfocada en la satisfacción de nuestras clientas.
+                    </p>
+                    <p>
+                        Aspiramos a consolidarnos como una boutique reconocida en Shushufindi por la calidad de nuestros productos,
+                        el buen servicio y la confianza que transmitimos en cada compra.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="imagenes/ropa2.jpg" class="img-fluid rounded shadow" alt="Boutique de ropa femenina">
+                </div>
+            </div>
+        </section>
+
+        <!-- COLECCIÓN DESTACADA → CONTENEDOR DINÁMICO -->
+        <section id="productos" class="mt-5">
+            <h2 class="text-center mb-5">Colección Destacada</h2>
+            <div id="contenedorProductos" class="row g-4"></div>
+            <div id="mensajeSinProductos" class="alert alert-info text-center mt-4 d-none">
+                No hay productos disponibles en este momento. ¡Pronto actualizaremos nuestra colección!
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="mt-5">
+            <h2 class="text-center mb-4">¿Por qué elegir Linda Fashion Boutique?</h2>
+
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Variedad</h4>
+                            <p>Vestidos, blusas, jeans, conjuntos, accesorios y más.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Asesoría</h4>
+                            <p>Te ayudamos a elegir la prenda ideal según tu estilo y necesidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Tendencia</h4>
+                            <p>Actualizamos nuestra colección con moda femenina actual y elegante.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card shadow h-100 p-3">
+                        <div class="card-body">
+                            <h4>Confianza</h4>
+                            <p>Brindamos una experiencia cercana, segura y orientada a cada clienta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="mt-5 text-center">
+            <h2 class="mb-4">Video Promocional</h2>
+            <p class="mb-4">
+                Descubre el estilo y la esencia de Linda Fashion Boutique a través de nuestra propuesta visual de moda femenina.
+            </p>
+
+            <video controls class="shadow rounded w-100" style="max-width: 700px;">
+                <source src="videos/Video de ropa.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </section>
+
+        <!-- REGISTRO DE PRENDAS -->
+        <section id="registro" class="mt-5">
+            <h2 class="text-center mb-3">Registro de Prendas</h2>
+            <p class="text-center mb-5">
+                Agrega nuevas prendas al catálogo de Linda Fashion Boutique mediante un formulario dinámico con validaciones en tiempo real.
+            </p>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-4 p-md-5">
+
+                            <form id="formularioRegistro" novalidate>
+                                <div class="row g-4">
+
+                                    <div class="col-md-6">
+                                        <label for="nombre" class="form-label fw-semibold">Nombre de la prenda</label>
+                                        <input type="text" id="nombre" class="form-control" placeholder="Ej: Vestido floral elegante">
+                                        <div id="errorNombre" class="mensaje-validacion"></div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="categoria" class="form-label fw-semibold">Categoría</label>
+                                        <select id="categoria" class="form-select">
+                                            <option value="">Seleccione una categoría</option>
+                                            <option value="Vestidos">Vestidos</option>
+                                            <option value="Blusas">Blusas</option>
+                                            <option value="Jeans">Jeans</option>
+                                            <option value="Conjuntos">Conjuntos</option>
+                                            <option value="Accesorios">Accesorios</option>
+                                        </select>
+                                        <div id="errorCategoria" class="mensaje-validacion"></div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="descripcion" class="form-label fw-semibold">Descripción</label>
+                                        <textarea id="descripcion" class="form-control" rows="4" placeholder="Describe la prenda, su estilo, color, material o uso recomendado"></textarea>
+                                        <div id="errorDescripcion" class="mensaje-validacion"></div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="talla" class="form-label fw-semibold">Talla</label>
+                                        <select id="talla" class="form-select">
+                                            <option value="">Seleccione una talla</option>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                        </select>
+                                        <div id="errorTalla" class="mensaje-validacion"></div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="precio" class="form-label fw-semibold">Precio ($)</label>
+                                        <input type="number" id="precio" class="form-control" placeholder="Ej: 29.99" min="1" step="0.01">
+                                        <div id="errorPrecio" class="mensaje-validacion"></div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="estado" class="form-label fw-semibold">Estado</label>
+                                        <select id="estado" class="form-select">
+                                            <option value="">Seleccione el estado</option>
+                                            <option value="Disponible">Disponible</option>
+                                            <option value="Agotado">Agotado</option>
+                                            <option value="Próximamente">Próximamente</option>
+                                        </select>
+                                        <div id="errorEstado" class="mensaje-validacion"></div>
+                                    </div>
+
+                                </div>
+
+                                <div id="mensajeGeneral" class="mt-4"></div>
+
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                                        Registrar prenda
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h4 class="fw-bold">
+                    Total de prendas registradas:
+                    <span id="total">0</span>
+                </h4>
+            </div>
+
+            <div id="listaPrendas" class="row mt-4"></div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="mt-5">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">Información de contacto</h4>
+                            <p><strong>Correo:</strong> fashionshushufindi@gmail.com</p>
+                            <p><strong>Teléfono:</strong> 0991234567</p>
+                            <p><strong>Dirección:</strong> Shushufindi - Sucumbíos</p>
+                            <p><strong>Horario:</strong> Lunes a Sábado de 08h00 a 18h00</p>
+
+                            <div class="mt-3">
+                                <a href="https://www.facebook.com/profile.php?id=100078310595037" class="btn btn-primary m-1" target="_blank">
+                                    Facebook
+                                </a>
+                                <a href="https://instagram.com" class="btn btn-danger m-1" target="_blank">
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">Envíanos un mensaje</h4>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" placeholder="Ingresa tu nombre">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Correo</label>
+                                    <input type="email" class="form-control" placeholder="Ingresa tu correo">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Mensaje</label>
+                                    <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                                </div>
+
+                                <button class="btn btn-success" type="button">
+                                    Enviar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMOCIÓN -->
+        <aside class="alert alert-warning mt-5 text-center shadow">
+            <h4>Promoción Especial</h4>
+            <p class="mb-2">
+                Obtén un <strong>20% de descuento</strong> en compras superiores a <strong>$80</strong>.
+            </p>
+            <p class="mb-0">
+                Linda Fashion Boutique te acompaña con estilo, elegancia y atención personalizada.
+            </p>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <p class="mb-1">Linda Fashion Boutique © 2026</p>
+        <p class="mb-1">Desarrollado por Bella Anahí Morocho Vite</p>
+        <p class="mb-0">Desarrollo de Aplicaciones Web</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
